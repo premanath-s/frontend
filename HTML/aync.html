@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script type="module">
+        async function1(){
+
+
+        }
+
+    </script> -->
+    <script type="module">
+    async function fetchEmployee(){
+        try{
+            const responses =await fetch("https://jsonplaceholder.typicode.com/users");
+            if (!response.ok)throw new error("API error! status:"+ response.status);
+
+            const result=await responses.json();
+            console.log("full responses:",result);
+            console.log("Name of 0th index",result[0].name);
+        }
+        catch(err){
+            console.error("error fetching data:",err);
+        }
+    }
+    fetchEmployee();
+    </script>
+</body>
+</html>

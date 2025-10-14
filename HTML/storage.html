@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="input data">
+    <button onclick="saveData()">Save Data</button>
+    <p id="messege"></p>
+
+
+    <script>
+let saveddate=localStorage.getItem("savedname");
+if (saveddate){
+    document.getElementById("messege")="messege"+saveddate;
+}
+function saveData(){
+    localStorage.setItem("name",input_data).innerText
+    document.getElementById("messege").innerText=saveddate;
+}
+
+
+
+let a=["apple","banana","grapes","mango","orange"];
+a.map((value,index)=>{
+    console.log(value,index);
+});
+
+
+// setTimeout(()=>{
+//     alert("hello world");
+// },9000);
+
+// setInterval((){
+//     alert("set interval");
+// },9000);
+
+// var date=new Date();
+// console.log(date);
+// document.getElementById("messege").innerText=date.toLocaleTimeString();
+
+setInterval(()=>{
+    var date=new Date();
+    document.getElementById("messege").innerText=date.toLocaleTimeString();
+},1000);
+
+        // localStorage.setItem("name","prem");
+
+        // console.log(localStorage.getItem("name"));
+    </script>
+</body>
+</html>

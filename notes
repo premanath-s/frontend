@@ -1,0 +1,602 @@
+HTML
+CSS
+JS
+ReactJS
+
+Hyper text Markup Language
+
+HTML VS HTMLS
+
+CSS
+cascading style sheets
+1.Inline CSS
+2.Internal CSS
+3.External CSS
+
+JS
+JavaScript
+
+we write a script to make our web page functionable
+
+we can also use TypeScript to make our web page functionable (TS is a advanced than JS)
+
+Frontend-------------------- API------------------- Backend (server)----------------Database
+                            (Redis)
+                            (REDIS KEY)
+                            (Cache)
+                            (Flush Cache when data is updated)
+HTML                          |                      Java                           SQL
+CSS                           |                      Nodejs                         NOSQL(MangoDB)
+JS                            |                      python                         
+ReactJS                       |                      C#                             Postgresql(SQl)
+TypeScript                    |                      PHP                            oracle(SQl)
+
+------------------------------------------------------------------------------------------------------------------------------
+                                                                |
+                                                                |
+                                                                |
+                                                      (GIT version control)
+                                                                |
+                                                                |
+                                                   (frontend,backend,database)
+                                                              cloud
+                                                         (AWS,Azure...)
+                                                        (Domain mapping)
+
+
+{}
+[]
+key Value pair:
+{ "name":"prem"
+  "age":23
+  "city":"Bangalore"}
+
+  ReactJS
+  it is a javascript library for building larger scale user interface.
+
+  1.Git Init
+  To initialized into project with repository
+
+  2. Git add
+  To add files to the repository
+
+  3.Git commit
+  To push files to the remote repository
+
+  4.Git Push
+  To push files to the remote repository
+
+  5.Git pull
+  To pull files from the remote repository
+
+  6.Git Branch
+  To check current branch
+
+  7.Git remote -v
+  To check remote repository
+
+  8.Git status
+  To check status of the repository
+
+  9.Git stash
+  To stash changes
+
+  10.Git stash pop
+  To pop stash changes
+
+The html output is called as DOM (document object model)
+
+Attribut : attribute value
+style      = "background-color:aquamarine;"
+
+*=univarsal tag
+*{
+     margin=0
+ }
+  universal margin set to 0,to avoid unnecessary 
+
+.background{
+            background-color: darkgreen;
+           } this is used to create a class
+
+UTF-8=(unicode transformation format 8-bit)
+UTF-8 is a variable-length character encoding for unicode,which is a character set that includes all characters from all language.
+
+UTF-8
+to define a language as en,hi.. we have to a define its bit size as UTF-8 is latest 8 bit which include all language
+to translate our web page
+
+For example:-
+
+when you visit any non english webpage you can notice an pop-up to translate web page into english,this works with help of UTF-8
+
+initially the language will be what we difine in (<html lang="en">),based on the user's preference our webpage will translate the lang
+
+SMM:-
+social media marketing
+
+Keywords:-
+
+1.transactional keywords
+best ent near(any keyword starts with best ,top ,are know as transactional keyword)
+top 10 dental care near me
+best teeth whitenting in mumbai
+best oral health near me
+best online cinsultation
+best tratment in mumbai
+
+2.informational keyword(keywords starts without transactional keyword)
+standa as informational keyword
+my appointments
+emergency dentaal
+
+Semantic tages(HTML5):-
+
+1.section
+2.nav
+3.header
+4.footer
+5.container
+
+List :-
+
+order and unorder list
+<li> li is a child tag used for both ,ol as wel ul.
+
+Static:- if a project is developed without backend-integrated khown as static project
+
+Dynamic:- if a project is developed with backend -integrated known as dynamic project
+
+form controls
+textbox
+password
+checkbox
+radiobutton
+select 
+submit
+email
+file
+data
+time
+
+button :- is used to perform CTA(call to actions) in the webpage
+
+Submit:- is uded to submit the form data/input field data to the server
+
+Table
+
+1.thead 
+a.we use thead for headings of our table
+b.thead is a parent of <th>
+
+2.tbody
+a.we use tbody for body of our table
+b.tbody is a parent of <tb>
+
+3.<tr>table row
+a.we use tr for rows of our table
+b.a row must be defined before defining data of a table
+
+4.<td> table data
+a.we use td for data(values)for our table inside <tbody>
+
+cookies(2kb of storage)
+web-storage(5mb of storage)
+1.local storage
+(1 to many)
+2.session storage
+(1 to 1)
+
+Local
+
+1.local storage is a web storage feature that allows websites to store data in the browser with no expiration time .
+2.this means the data remains available even after the user closes and response the browser or the system is restarted.
+3.It is typically used to save long-term data such as user preferences ,themes ,or login tokens.
+
+Session
+
+1.session storage is also a browser- based storage method,but it only  stores data for the duration of a single browser tab session .
+2.once the tab is cloased,all session storage data is automatically deleted .
+3.It is useful for storing temporary data like form inputs or navigation steps that dont need to present beyond the current session .
+4.unlike local storage ,session storage is not shared across tabs-each tab has its own session.
+
+img 
+
+1.used to embed images(JPG,PNG,etc)
+2.Not interactive -just displays the image
+3.lightweight -loads fast
+4.cannot load HTML ,vedios ,or external sites
+5.no security risks involved
+
+iframe
+
+1.used to embed external content or full web pages
+2.can embed videos,maps ,forms,even other websites
+3.fully interactive - user can scrolls,click,playc etc.
+4.Heavier than <img> - may affect performance.
+
+Bootstrap
+
+RWD(Responsive web design)
+1.Bootstrap will adjust components based on the screen size.
+2.Bootstrap is a front-end  framework that include HTML and CSS-based design templates for typography.
+
+1.layout 
+2.Grid system 
+
+Layout Example:-
+
+mobile==>576px
+mobile large screen ==> 576px
+tablets==>768px
+laptops==>992px
+desktop/projectors ==>1200px
+
+Row 
+
+col-12
+row
+col-12
+
+whenever we call a row a column should also be called accordingly.
+we cant call row inside a row & column inside a column.
+
+Bootstrap
+
+Bootstrap card
+1.Bootstrap card is a component that can be used to display content in a card-line layout.
+
+Javascript:-
+
+1.it is a client side scripting lang
+2.it is used to validate pages
+3.it can update content,modify properties and execute code without page reload
+4.it is a high level interupted programming lang.
+
+Javascript variables:-
+
+1.let(local scoped)
+2.var (global scoped )
+3.const(constant)
+
+local scoped(let):-
+a variable cannot be accesed outside a function without defining.
+
+global scope(var):-
+a variable can be accessed outside a function without defining.
+
+print statement in document page:
+document.write(variable);
+
+debugging:
+console.log(variable)
+
+data types in js
+1.primitive
+2.non-primitive
+
+1.primitive data types:-
+
+   a.string:textual data.
+   b.number:integers,floating-point numbers,special values like NaN and Infinity.
+   c.Boolean:logical values(true or false).
+   d.undefined: variable declared but not assigned a value
+   e.null:Intentional absence of value.
+   f.Symbol:unique identifiers(ES6).(ES6=ECMScript 2015(ES6))
+
+2.non-primitive data types:-
+
+  a.object:key-value pairs.
+  b.array:indexed collections.
+  c.function:reusable block of code.
+
+  1.[]
+  array
+  2.{}
+  object
+  3.()
+  function
+  4.[{}]
+  array of object
+
+  array length =1,2,3,4,5
+  index=array length -1(n-1)=4
+
+--------------------------------------------------------------------------
+  operators=
+
+  1.arithmetic operators= used for mathematical calculations.
+
+  operator   |   Description           | example    |    Result
+  -----------------------------------------------------------------------
+  a.+                 addition            5+3             8
+  b.-               subtraction           5-3             2
+  c.*                multiplication       5*3             15
+  d./               division              5/2             2.5
+  e.%               modulus(reminder)     5%2             1
+  f.**             exponentiation         5**2            25
+  g.++              increament            let x=5;        x++ = 6
+  h.--              decreament            let x=5;        x-- = 4
+
+  increament 
+  1.pre increment
+  2.post increament 
+
+--------------------------------------------------------------------------
+2.asssignment operators= used to assign values to variables.
+
+operator     |        desc               |    ex      |        equivalent to  
+
+a.  =                  assigment             x=10
+b.  +=                 add and assign        x += 5              x=x+5
+c.  -=                 sub and assign        x -=5               x=x-5
+d.  *=                 mul and ass           x*=5                x=x*5
+e.  /=                 div and ass           x/=5                x=x/5
+f.  %=                 modulus and ass       x%=5                x=x%5
+g.  **=                exponentiation        x**=2               x=x***2
+------------------------------------------------------------------------------------
+
+3.comparision oper = used to compare two values.
+
+operator        |         description             |      example      |   result
+
+a.  (==).                  equal to 5                     =="5"            true
+b.  (===).                 strict equal                   5==5             true
+c.  ===                    (type+value)                   5==="5"          false
+d.  !=                     not equal                      5!="5"           false
+e.  !==                    strict not equal               5!=="5"          true
+f.  >                      greater than                   5>3              true
+g.  <                      less than                      5<3              false
+h.  >=                     greater than or equal          5>=5             true
+i.  <=                     less than   or equal           5<=3             false
+-------------------------------------------------------------------------------------
+array methods:-
+
+concat=this 'concat()' method in js used to merge two or more arrays,and it does not change the existing arrays, but insted returns a new array containing elements from both arrays.
+
+1.push(element):- adds elements of the array.
+
+2.pop(element):- remove elements of the array.
+
+3.shift():- remove the first element of the array.
+
+4.unshift():- add the first elements of the array.
+
+5.slice(start,end):- return a new array from start to end .
+
+6.include(elements):-  checks if element exists in the array.
+
+7.splice(start,no of elements)
+
+
+Example:
+------------------------------------------------
+Delete:
+-------------------------------------------------
+let nums=[10,20,30,40,50];
+nums.splice(0,3)
+console.log(nums);
+
+1.start at index 0-> element 10
+2.delete 3 elements -> remove [10,20,30];
+result:[40,50]
+--------------------------------------------------
+Insert :
+--------------------------------------------------
+let arr=[10,20,30,40];
+arr.splice(2,0,25);
+console.log(arr)
+
+1.start at index 2-> position before element  30.
+2.remove 0 elements.
+3.insert 25 at index 2.
+result :[10,20,25,30,40]
+--------------------------------------------------
+Replace:
+---------------------------------------------------
+let arr=[10,20,30,40,50];
+arr.splice(1,2,200,300);
+console.log(arr);
+
+1.start at index 1-> element 20.
+2.delete 2 elements-> remove [20,30].
+3.insert 200,300 at index 1.
+result:[10,200,300,40,50]
+------------------------------------------------------
+
+js hoisting 
+1.in js a vaiable can be used without being declared.
+2.to avoid hoisting we use (use strict)
+
+CRUD(create,Read,Update,Delete)
+js events
+1.onclick
+2.onmouseover
+3.onmouseout
+4.onkeydown
+5.onkeyup
+6.onchange
+
+function syntax:
+step1=function defination
+step2=function calling:
+
+step 1:
+function functionname({
+  description
+})
+step 2:
+functionname();
+
+for loop
+i=[0,1,2,3,4,5]
+a=[10,20,30,40,50]
+
+for i=0,i<3,i++
+
+a=10,i=0,i<3(true),i++=0+1=1
+a=10,20,           i++=1+1=2
+a=10,20,30          i++=2=1=3
+a=10,20,30,40
+The above code is a simple for loop itrating over two array 'i' and 'a'.It initialies 'i' with value[0,1,2,3,4,5]an 'a' with values [10,20,30,40,50,60]. The loop run as long as 'i' is less than 3,inrementing 'i' by 1 in each iteration. during each iterations,it prints the corresponding value of 'a'.
+
+for i=0,i<=a.length,i++
+
+a=10,i=0,i<=a(true).
+a=[10,20,30,40,50,60]
+
+the above code showing a loop that iterates over an array 'a' containing the values[10,20,30,40,50,60]. the loop starts at index 0 and continues as long as the index 'i' is less than length of the array 'a'.
+
+
+webstorage:
+//seve data
+localStorage.setItem("name","prem");
+
+//read data
+console.log(localStorage.getItem("name"));//prem
+
+//clear All
+localStorage.clear();
+
+1.setTimeout
+this function in javascript is used to execute a function or code snippet after a specified delay in milliseconds.in this case,is setting up a timeout to display an alert with the message"hello world"
+after a delay of 5000 milliseconds (which is equivalent)
+
+
+setTimeout(()=>{
+    alert("hello world");
+},9000);
+
+setInterval((){
+    alert("set interval");
+},9000);
+
+REST API (representational state transfer) Application programming interface
+
+try
+catch
+if try is called
+
+npm -v
+to check the node version
+
+react notes
+react js 
+1.it is a javascript library
+2.React js is used to create ui components
+3.virtual DOM support
+4.its very fast in performance when compare to other frameworks
+5.single page application(SPA) development
+6.component based architectire
+7.server side rendering
+
+setup
+1.navigate to project folder/directory
+cmd: cd foldername
+
+2.how to create react setup
+cmd npm install create-react-app
+
+3.how to create react project
+cmd: npx create-react-app reactproject
+note: project name should be in small letters
+
+4.run/execute react project
+cd reactproject
+npm start
+
+
+Component
+->component is a unit of logic,it contains javascript,css and html.
+->it will return always html elements
+->every component must be exported an impoeted before call/Access
+
+It has 2 types of components
+1.functional component 
+->stateless component
+->it will follow react hooks
+
+2.class component
+->statefull component
+->it will follow life cycle
+
+
+function component vs class component in react
+
+feature                         function component                            class component
+
+syntax                            just a function                             uses a class
+code simplicity                    short and clean                            more code,more setup
+usage                              mostly used now                            used in older code
+
+
+Bootstrap setup
+
+1.npm install bootstrap@4.6.0
+
+2.to check installation status
+npm list bootstrap
+
+3.import css files
+import "bootstrap/dist/css/bootstrap.bundle.min.css";
+
+4.import js files
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+
+5.uninstall
+npm uninstall bootstrap
+
+react routing 
+to setup react routing need to install routing package
+
+npm install react-router-dom
+
+
+to navigate one page to another page using routing
+
+react routing component
+1.BrowserRouter --> to handle browser navigation action
+2.router--> router will have route  configaration 
+3.route -->
+4.
+
+react hook
+1.useState-->
+*It lets you create and store a value inside your component that can change over time.
+*Think of it like a box where you keep something ,and  you can update what's inside whenever you want.
+
+2.useEffect-->
+*It lets you run some code after the component renders (or when certain things change)
+*It's like saying:"hey react, when you show this component on the screen, run this code".
+
+Component life cycle
+1.Mounting 
+2.updating 
+3.unmounting
+
+---------------------------------------------------------------------
+sample code :
+---------------------------------------------------------------------
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+function Greeting(){
+return (
+<>
+<hello world/>
+<messege/>
+</>
+);
+}
+funtion Helloworld(){
+  return <h1>Hello world</h1>;
+}
+
+funtion messege(){
+  return <h1>Hello world</h1>;
+  
+}
+ReactDOM.render(<Greeting/>,document.getElementById("root"));
+
+

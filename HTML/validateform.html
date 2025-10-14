@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section>
+        <form>
+            First name: <input type="text" id="f_name">
+            <br><br>
+            Last name: <input type="text" id="l_name">
+            <br><br>
+            Email: <input type="email" id="email">
+            <br><br>
+            Password: <input type="password" id="pass">
+            <br><br>
+            Confirm Password: <input type="password" id="c_pass">
+            <br><br>
+            <input type="button" value="Submit" onclick="validate()">
+
+        </form>
+        <table>
+            <thead>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Edit
+                </th>
+                 <th>
+                    Delete
+                </th>
+            </thead>
+
+            <tbody id="table_body">
+             
+             
+                <!-- dynamic data of table will be displayed here -->
+            </tbody>
+        </table>
+        <div id="msg"></div>
+    </section>
+    <script>
+        function validate() {
+            var first_name = document.getElementById("f_name").value;
+            var last_name = document.getElementById("l_name").value;
+            var e_mail = document.getElementById("email").value;
+            var password = document.getElementById("pass").value;
+            var c_password = document.getElementById("c_pass").value;
+
+            if (first_name == "")
+                document.getElementById("msg").innerHTML = '<span style="color:red">First name is required</span>';
+            else if (last_name == "")
+                document.getElementById("msg").innerHTML = '<span style="color:red"> Last name is required</span>';
+            else if (e_mail == "")
+                document.getElementById("msg").innerHTML = '<span style="color:red"> Email required</span>';
+            else if (password == "")
+                document.getElementById("msg").innerHTML = '<span style="color:red"> Password is required</span>';
+            else if (password != c_password)
+                document.getElementById("msg").innerHTML = '<span style="color:red"> Password and Confirm Password must be same</span>';
+            else    
+                document.getElementById("msg").innerHTML = '<span style="color:green"> Form Submited Succesfully!!</span>';
+            displayData(first_name, last_name, e_mail);
+          
+
+        }
+      
+      
+        var users = [];
+        function displayData(First_name, Last_name, Email) {
+            users.push({ "first_name": First_name, "last_name": Last_name, "e_mail": Email });
+            console.log(users);
+            var row = "";
+
+
+            user.map(function(element,index){
+                row = row + "<tr><td>" + users[i].first_name + "</td><td>" + users[i].last_name 
+                    + "</td><td>" + users[i].e_mail + "</td><td><button onclick='EditUser("+ i +")'>Edit</button></td></tr>";
+                console.log(row);
+            })
+            document.getElementById("table_body").innerHTML = row;
+        }
+
+        function EditUser(i){
+            document.getElementById("f_name").value = users[i].first_name;
+            document.getElementById("l_name").value = users[i].last_name;
+            document.getElementById("email").value = users[i].e_mail;
+             var row = "";
+            for (var i = 0; i < users.length; i++) {
+                row = row + "<tr><td>" + users[i].first_name + "</td><td>" + users[i].last_name 
+                    + "</td><td>" + users[i].e_mail + "</td><td><button onclick='EditUser("+ i +")'>Edit</button></td></tr>";
+                console.log(row);
+            }
+            document.getElementById("table_body").innerHTML = row;
+         
+        }
+
+
+      
+
+
+
+
+
+  
+
+    </script>
+</body>
+
+</html>
