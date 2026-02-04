@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        cookies page
+    </h1>
+    <script>
+        document.cookie="firstname=prem ;expires=Fri,31 Dec 2025 23;59;59 GMT;path=/";
+         document.cookie="sessionToken=50 ;expires=Fri,31 Dec 2025 23;59;59 GMT;path=/";
+          document.cookie="lastname=prems;expires=Fri,31 Dec 2025 23;59;59 GMT;path=/";
+       // console.log(document.cookie);
+
+        function getCookie(name){
+            let cookieArr=document.cookie.split(";");
+            for(let i=0;i<cookieArr.length;i++){
+                let cookiePair=cookieArr[i].split("=");
+                if(name==cookiePair[0].trim()){
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+            return null;
+        }
+        console.log(getCookie("firstrname"));
+        console.log(getCookie("sessionToken"));
+        console.log(getCookie("lastname"));
+
+        let count=getCookie('count')
+        count=count? +count+1:1
+
+        document.cookie="count="+count+"; path=/";
+        document.write("You have visited this page " +count +"times.");
+       document.write('<h2>You visited this page ${count}times.<h2>');
+
+
+
+// //1.create a function to double the give array [1,2,3]
+// function doubleArray(arr){
+// let result=[];
+// for(let i=0;i<=arr.lenth;i++){
+// //if(result=0 array*2)
+// //result.push[]
+// result.push(array[i]*2);
+// }
+// console.log(result)
+// }
+
+// doubleArray([1,2,3]);
+// let nums=[1,2,3]
+// let doublenum=[1,2,3]
+// nums.map(num=>num*2)
+// console.log(doublenum)
+
+// let nums=[1,2,3,4,5];
+// let double=nums.map(function(num){
+//     return num*2;
+// });
+// console.log(double);
+// //let double =nums.map(num=>num*2);
+// //console.log(double);
+
+// //2.use map() to convert  all string in an array to uppercase?
+// let names="prem";
+// let UppCase=names.map(name=>name.toUpperCase());
+//  console.log(UppCase);
+
+// //3.use map() to get only  the names from this array of object:
+// let users= [
+//   { name: "prem",age:24 },
+//   { name: "manu",age:23 },
+//   {name:"john",age:35}
+// ];
+// let usernames=users.map(user=>user.name);
+
+// console.log(usernames[1]);
+
+
+//4.add a prefix to every items is an array using map()?
+//fruit:apple,fruit:banana, fruit:grapes 
+
+// function setTimeout(){
+//     alert("Hello World!")
+// }
+// setTimeout(setTimeout,3000)
+
+// function setTimeout(){
+//     alert("Hello World!")
+//  }
+//  setInterval(setTimeout,3000)
+
+async function FetchDataFromApi(){
+    console.log("Fetching data from API..");
+
+    let response=await fetch('https://jsonplaceholder.typicode.com/posts/1');
+    let data=await response.json();
+    console.log("Data fetch initiated.");
+    console.log(response);
+    console.log(data);
+}
+FetchDataFromApi();
+
+
+</script>
+</body>
+</html>

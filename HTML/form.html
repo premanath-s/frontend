@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formData"> 
+        Name:<input type="text" id="name" placeholder="Enter your name Here!"/>
+        <br/><br/>
+        Email:<input type="text" id="email" placeholder="Enter your email"/>
+        <br/><br/>
+        phone:<input type="tel" id="Phone" placeholder="Enter your number"/>
+        <br/><br/>
+         Password:<input type="password" id="password" placeholder="Enter your password"/>
+        <br/><br/>
+        confirm Password:<input type="password" id="confirm-password" placeholder="Enter your password"/>
+        <br/><br/>
+        <input type="button"  value="submit"  onclick="ValidateDate()"/>
+        <input type="button"  value="Update"  onclick="UpdateUserData()"/>
+        
+    </form>
+    <p id="msg">
+    </p>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </thead>
+        <tbody id="user-data">
+
+        </tbody>
+    </table>
+    
+ 
+    <script>  
+    function ValidateDate(){
+    var NAME=document.getElementById('name').value;
+    console.log(NAME);
+    var EMAIL=document.getElementById('email').value;
+    console.log(EMAIL);
+    var PHONE=document.getElementById('Phone').value;
+    console.log(PHONE);
+    var PASSWORD=document.getElementById('password').value;
+    var CONFPASSWORD=document.getElementById('confirm-password').value
+
+    if (NAME==""){
+        document.getElementById("msg").innerHTML="<span style='color:red'>Name cannot be empty </span>";
+    }
+    else if (EMAIL==""){
+        document.getElementById("msg").innerHTML="<span style='color:red'>Email cannot be empty </span>";
+    }
+    else if (PHONE==""){
+        document.getElementById("msg").innerHTML="<span style='color:red'>Phone cannot be empty </span>";
+    }
+    else if (PASSWORD.length<6){
+        document.getElementById("msg").innerHTML="<span style='color:red'>password must be at least 6 characters</span>";
+    }
+    else if (!/[0-9]/.test(PASSWORD)){
+        document.getElementById("msg").innerHTML="<span style='color:red'>password must be at least one number</span>";
+    }
+    else if (PASSWORD!=CONFPASSWORD){
+        document.getElementById("msg").innerHTML="<span style='color:red'>password incorrect </span>";
+    }
+    else    {
+        document.getElementById("msg").innerHTML = "<span style='color:green'> Form Submited Succesfully!!</span>";
+        DisplayUsers(NAME,EMAIL,PHONE);
+        Clearform();
+    }
+    }
+let users = [];
+
+function DisplayUsers(NAME,EMAIL,PHONE){
+     users.push({name:NAME,email:EMAIL,Phone:PHONE})
+    console.log(users);
+
+    var row="";
+   // for(let i=0;i<users.length;i++){
+      //  row=row+"<tr><td>"+users[i].name+"</td>"+"<td>"+users[i].email+"</td>"+"<td>"+users[i].Phone+"</td><button onclick='EditUser("+i+")'>Edit</button></tr>";         
+      //}
+      users.map((user,index)=>{
+        row=row+"<tr><td>"+user.name+"</td>"+"<td>"+user.email+"</td>"+"<td>"+user.Phone+"</td><button onclick='EditUser("+index+")'>Edit</button></tr>";
+      })
+      document.getElementById("user-data").innerHTML=row;
+}
+
+function Clearform(){
+document.getElementById("formData").reset();
+}
+
+
+function EditUser(i){
+
+   
+    document.getElementById("name").value=users[i].name
+    document.getElementById("email").value=users[i].email;
+    document.getElementById("Phone").value=users[i].Phone;
+
+}
+
+function UpdateUserData(){
+    users[assignedindex].NAME=document.getElementById("name").value;
+    users[assignedindex].EMAIL=document.getElementById("email").value;
+    users[assignedindex].PHONE=document.getElementById("Phone").value;
+  var row="";
+    for(let i=0;i<users.length;i++){
+       row=row+"<tr><td>"+users[i].name+"</td>"+"<td>"+users[i].email+"</td>"+"<td>"+users[i].Phone+"</td><button onclick='EditUser("+i+")'>Edit</button></tr>";         
+     }
+     
+      document.getElementById("user-data").innerHTML=row;
+
+}
+</script>
+</body>
+
+
+</html>

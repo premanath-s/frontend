@@ -44,6 +44,10 @@ TypeScript                    |                      PHP                        
                                                         (Domain mapping)
 
 
+
+
+
+
 {}
 []
 key Value pair:
@@ -265,8 +269,15 @@ a variable cannot be accesed outside a function without defining.
 global scope(var):-
 a variable can be accessed outside a function without defining.
 
+const:-
+
+
 print statement in document page:
 document.write(variable);
+
+
+hoisting:-
+a variable can be used before declaration , it called as hoisting ,to avoid hoisting use the strict in script.
 
 debugging:
 console.log(variable)
@@ -327,6 +338,7 @@ data types in js
 
 operator     |        desc               |    ex      |        equivalent to  
 
+-----------------------------------------------------------------------------------
 a.  =                  assigment             x=10
 b.  +=                 add and assign        x += 5              x=x+5
 c.  -=                 sub and assign        x -=5               x=x-5
@@ -407,6 +419,16 @@ result:[10,200,300,40,50]
 js hoisting 
 1.in js a vaiable can be used without being declared.
 2.to avoid hoisting we use (use strict)
+
+funtion fn(){
+  function defination
+}
+function calling;
+
+fruits=["applae","banana"]
+Index=0;
+
+[{"Name":"prem","Age":"20","Gender":"M"}{"Education":"BE"}]  -->Array of object
 
 CRUD(create,Read,Update,Delete)
 js events
@@ -598,5 +620,120 @@ funtion messege(){
   
 }
 ReactDOM.render(<Greeting/>,document.getElementById("root"));
+
+
+understanding cookies:
+cookies are small pieces of data stored in the browser,they help websites remember information about users,like login status,
+preferences,or shopping cart items.
+
+stored as name =value pairs.
+useful for tracking small data across sessions.
+
+how we write a cookies:
+document.cookie="username=johnDoe;expires=Fri ,31 Dec 2024 23;59;59 GMT;path=/";
+
+3.how we read a cookies;
+console.log(document.cookies);
+//output:"username=johnDoe";
+
+4.deleting cookies;
+
+to delete a cookies ,set its expiring data to the past;
+document.cookie="username;expires=Thu ,01 Jan 1970 00:00:00 UTC;path/;";
+
+5.counting with cookies;
+it say you want to want to count many times user visited the page.
+
+count ="1...n"
+string concat+count+
+template literals `${count}`
+
+callback  fns:
+
+1.map()
+The map() the method is used to loop through an array and create a new array with the result of applying a function to each element.
+
+2.setTimeout()
+The setTimeout() method runs a function once after a specified delay (in milliseconds).
+
+3.setInterval() method runs a function repeatedly,at a fixed time interval (in milliseconds),until stopped.
+
+eg:
+let nums =[1,2,3];
+let doubled=nums.map(num=>num*2);
+console.log(doubled);//output:[2,4,6]
+
+(num=>num*2)
+num=1*2(0)
+num=2*2(1)
+num=3*2(2)
+
+//1.create a function to double the give array [1,2,3]
+function doubleArray(arr){
+let result=[];
+for(let i=0;i<=arr.lenth;i++){
+//if(result=0 array*2)
+//result.push[]
+result.push(array[i]*2);
+}
+console.log(result)
+}
+
+doubleArray([1,2,3]);
+let nums=[1,2,3]
+let doublenum=[1,2,3]
+nums.map(num=>num*2)
+console.log(doublenum)
+
+let nums=[1,2,3,4,5];
+let double=nums.map(function(num){
+    return num*2;
+});
+console.log(double);
+//let double =nums.map(num=>num*2);
+//console.log(double);
+
+//2.use map() to convert  all string in an array to uppercase?
+let names="prem";
+let UppCase=names.map(name=>name.toUpperCase());
+ console.log(UppCase);
+
+//3.use map() to get only  the names from this array of object:
+let users= [
+  { name: "prem",age:24 },
+  { name: "manu",age:23 },
+  {name:"john",age:35}
+];
+let usernames=users.map(user=>user.name);
+
+console.log(usernames[1]);
+
+4.add a prefix to every items is an array using map()?
+fruit:apple,fruit:banana, fruit:grapes 
+
+Async/Await
+javascript async and wait ;
+1.to create responsive application in javascript
+2.to execute concurrent process
+3.no block state or no need to wait till function ends.
+4.async and wait are used in javascript to work with asynchronous operations more easily.
+5.They allow code to wait for long tasks(like fetching data) without stopping the entire program.
+
+async->Marks a function that may run tasks which take time (but return promise(1/0)).
+await ->Pause the function until the function (promise) finishes ,but does not block other code.
+used for-> API calls,database operations, file reading,timer,etc.
+Benefit ->code become easier to read and understand (looks like normal step-by-step code).
+
+real life example
+example: ordering  food in a Restaurant
+1.You order biryani(this takes time to preapre).
+2.But you dont stand int the kitchen waiting (that would block everything).
+3.Insted ,you sit and talk wit friends (other work continue).
+4.When the biryani is ready,the waiter delivers it (result comes later).
+
+This is async behavior:
+1.order placed=Request sent
+2.waiter preapre silently=Awaiting result
+3.you l=keep doing other things=
 
 
